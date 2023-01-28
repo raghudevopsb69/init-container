@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$skip_schema" == "true" ]; then
+  echo "Skipping Schema"
+  exit
+fi
+
 git clone https://github.com/raghudevopsb69/$component
 cd $component/schema
 
